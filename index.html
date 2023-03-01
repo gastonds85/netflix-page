@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaky Blinders</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <header>
+            <img id="logo-netflix" src="./img/Logonetflix.png" alt="Logo Netflix">
+            <ul id="menu">
+                <li><a class="header-menu-let" href="">HOME</a></li>
+                <li><a class="header-menu-let" href="">TV SHOW</a></li>
+                <li><a class="header-menu-let" href="">MOVIES</a></li>
+                <li><a class="header-menu-let" href="">LATEST</a></li>
+                <li><a class="header-menu-let" href="">MY LIST</a></li>
+            </ul>
+            <span id="search">
+                <button class="material-icons">search</button>
+                <input type="text" placeholder="Search">
+            </span>
+        </header>
+        <Section class="banner">
+            <img src="./img/fondo.jpg" alt="Peaky blinder background" class="bg">
+            <span class="overlay-gradient"></span>
+            <div class="content">
+                <img src="./img/peaky blinders.png" alt="Peaky Blinders">
+                <h4>
+                    <span>2013</span>
+                    <span ><i>+16</i></span>
+                    <span>6 Seasons</span>
+                    <span>TV Crime</span>
+                </h4>
+                <div id="Serie-Description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil consectetur rerum amet saepe. Eum et totam laboriosam repudiandae exercitationem! Ducimus dolorem deserunt facere nemo eveniet nesciunt culpa ea temporibus.
+                    </p>
+                </div>
+                <div id="content-btn">
+                    <a id="btn-play"href="">PLAY</a>
+                    <a id="btn-ml"href="">MY LIST</a>
+                </div>
+                <button id="play-trailer" onclick="togglevideo()"><i class="material-icons">play_arrow</i></button>
+                <span id="wt">WATCH TRAILER</span>
+            </div>
+        </Section>
+        <section class="trailer">
+            <iframe control="true" width="860" height="515" src="https://www.youtube.com/embed/oVzVdvGIC7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button id="btnclose"><i class="material-icons" onclick="togglevideo()">close</i></button>
+        </section>
+    </main>
+    <script>
+        function togglevideo(){
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector("iframe");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
